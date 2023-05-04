@@ -1,0 +1,52 @@
+{
+  "name": "tarkov-alert-tg",
+  "version": "1.0.0",
+  "description": "Simple alert bot with Telegram API and tarkov dev API",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=default npx nodemon",
+    "build": "rimraf ./build && npx tsc",
+    "start": "cross-env NODE_ENV=production node './build/main.js'",
+    "lint": "npx eslint ./src",
+    "format": "npx eslint ./src --fix",
+    "check_price_script": "cross-env NODE_ENV=production node './build/scripts/price-check.js'",
+    "check_price_script_dev": "cross-env NODE_ENV=default npx ts-node './src/scripts/price-check.ts'"
+  },
+  "keywords": [
+    "tarkov",
+    "alert",
+    "bot",
+    "telegram",
+    "dev",
+    "api"
+  ],
+  "author": "DonEx Code <donexcode@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/config": "^3.3.0",
+    "@types/node": "^18.15.11",
+    "@types/node-telegram-bot-api": "^0.61.6",
+    "@typescript-eslint/eslint-plugin": "^5.58.0",
+    "@typescript-eslint/parser": "^5.58.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.38.0",
+    "husky": "^8.0.3",
+    "nodemon": "^2.0.22",
+    "prettier": "^2.8.7",
+    "rimraf": "^5.0.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "dependencies": {
+    "config": "^3.3.9",
+    "graphql": "^16.6.0",
+    "graphql-request": "^6.0.0",
+    "node-telegram-bot-api": "^0.61.0"
+  }
+}

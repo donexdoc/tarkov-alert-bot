@@ -1,0 +1,17 @@
+{
+  "appName": "Tarkov alert bot",
+  "mode": "PRODUCTION",
+  "debugMessages": true,
+  "apiHost": "http://api.tarkov.dev",
+  "apiReqLang": "ru",
+  "localItemsDb": "./local-db/items.json",
+  "watchItemsDb": "./local-db/watch.json",
+  "botSettingsDb": "./local-db/settings.json",
+  "tgConfig": {
+    "botToken": "",
+    "baseKeyboard": [["/start", "/watchlist"]],
+    "adminChatId": ""
+  },
+  "searchResultMaxDisplay": 5,
+  "searchResultTextMaxLength": 30
+}
