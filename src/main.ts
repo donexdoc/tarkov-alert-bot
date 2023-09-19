@@ -13,3 +13,4 @@ const bot = new TelegramBot(tgConfig.get("botToken"), { polling: true });
 
 // применяем комманды к боту
 applyBotCommands(bot);
+// какая-то новая правка
